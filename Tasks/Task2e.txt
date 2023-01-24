@@ -1,0 +1,31 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Tasks
+{
+    internal class Task7
+    {
+        public static void Main()
+        {
+            string[][] table = new string[4][];
+            table[0] = new string[3] { "List", "Product", "No.of.Items" };
+            table[1] = new string[3] { "a.", "bii" ,"There are 4 items left"};
+            table[2] = new string[3] { "b.", "ley", "There are 5 items left" };
+            table[3] = new string[3] { "c.", "ley", "There are 6 items left" };
+
+
+            for (int i = 0; i < table.Length; i++)
+            {
+                for (int j = 0; j < table[i].Length; j++)
+                {
+                    Console.Write(table[i][j] + "\t");
+
+                }
+                Console.WriteLine();
+            }
+        }
+    }
+}

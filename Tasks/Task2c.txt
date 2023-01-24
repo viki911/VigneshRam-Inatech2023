@@ -1,0 +1,47 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Tasks
+{
+    internal class Task5
+    {
+        public static void Main(string[] args)
+        {
+            Console.WriteLine("Enter the package name: ");
+            Console.Write("pack1\t");
+            Console.Write("pack2\t");
+            Console.WriteLine("pack3\t");
+            string pack = Console.ReadLine();
+            switch (pack)
+            {
+                case "pack1":
+                    Console.WriteLine("PACKAGE_1");
+                    Console.WriteLine("1.South Special");
+                    Console.WriteLine("2.Children's Club");
+                    Console.WriteLine("3.Movies");
+                    Console.WriteLine("RATE: Rs250");
+                    break;
+                case "pack2":
+                    Console.WriteLine("PACKAGE_2");
+                    Console.WriteLine("1.News");
+                    Console.WriteLine("2.Sports");
+                    Console.WriteLine("3.Movies");
+                    Console.WriteLine("4.Regional-2");
+                    Console.WriteLine("RATE: Rs450");
+                    break;
+                case "pack3":
+                    Console.WriteLine("PACKAGE_3");
+                    Console.WriteLine("Discovery,Histoty,National");
+                    Console.WriteLine("RATE: Rs350");
+                    break;
+                default:
+
+                    break;
+            }
+
+        }
+    }
+}

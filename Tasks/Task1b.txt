@@ -1,0 +1,38 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Tasks
+{
+    internal class Task2
+    {
+        
+        public static void Main(string[] args)
+        {
+            string ans;
+            Console.WriteLine("Do you have travel hitory(y/n): ");
+            ans = Console.ReadLine( );
+            if(ans!=null && ans.Contains('y'))
+            {
+              Console.WriteLine("Do you have temperature(y/n): ");
+              ans = Console.ReadLine( );
+              if(ans != null && ans.Contains('y'))
+                {
+                    Console.WriteLine("Do you have cough/sneeze(y/n): ");
+                    ans = Console.ReadLine();
+                    if(ans != null && ans.Contains('y'))
+                        {
+                        Console.WriteLine("Take swab test!!");
+                        }
+                    else{Console.WriteLine("Be in quarantine and take medicine.");}
+                 }
+              else{ Console.WriteLine("Be in home quarantine for 28days.");}
+
+             }
+            else { Console.WriteLine("Safe no Covid."); }
+
+        }
+    }
+}

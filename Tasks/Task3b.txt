@@ -1,0 +1,46 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Tasks
+{
+    class VAT
+    {
+        public void CalTax()
+        {
+            Console.WriteLine("Enter the amount in double precision:");
+            double amt = Convert.ToDouble(Console.ReadLine());
+            double vat = 20;
+            double tax = (amt * vat)/100;
+            Console.WriteLine("VAT:{0} ",tax);
+        }
+
+    }
+    class GST : VAT
+    {
+        public new void CalTax()
+        {
+            Console.WriteLine("Enter the amount in double precision:");
+            double amt = Convert.ToDouble(Console.ReadLine());
+            double gst = 12;
+            double tax = (amt * gst) / 100;
+            Console.WriteLine("GST:{0}",tax);
+        }
+    }
+
+   
+    internal class Task10a
+    {
+        public static void Main(string[] args)
+        {
+            GST gst = new GST();
+            gst.CalTax();
+            VAT vat = new VAT();
+            vat.CalTax();
+
+        }
+
+    }
+}

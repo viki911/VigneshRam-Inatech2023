@@ -1,0 +1,36 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Tasks
+{
+
+    internal class Task8c
+    {
+        string name;
+        int age;
+        public Task8c()
+        {
+           name = "Vignesh";
+            age = 21;
+        }
+      public Task8c(string name, int age)
+        {
+            this.name = name;
+            this.age = age;
+        }
+
+    public static void Main(string[] args)
+        {
+            Task8c obj = new Task8c();
+            Console.WriteLine(obj.name);
+            Console.WriteLine(obj.age);
+            Task8c bobj = new Task8c("vicky",22);
+            Console.WriteLine(bobj.name);
+            Console.WriteLine(bobj.age);
+        }
+
+    }
+}

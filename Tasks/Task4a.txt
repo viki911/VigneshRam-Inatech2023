@@ -1,0 +1,66 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Tasks
+{
+
+    abstract class Memb
+    {
+        public abstract void Goldpack();
+        public abstract void Silverpack();
+
+        public abstract void Platinumpack();
+    }
+
+    class ImpPack : Memb
+    {
+        public override void Goldpack()
+        {
+            Console.WriteLine("Gold pack contains 5days accomadation at resort & 2 Dinners on the house");
+
+        }
+        public override void Silverpack()
+        {
+            Console.WriteLine("Silver pack contains 3days accomadation at resort ");
+
+        }
+        public override void Platinumpack()
+        {
+            Console.WriteLine("Platinum pack contains 7days accomadation at resort & 5 Dinners on the house");
+
+        }
+
+
+    }
+    internal class Task9a
+    {
+        public static void Main(string[] args)
+        {
+            ImpPack obj = new ImpPack();
+            Console.WriteLine("Choose your package:");
+            Console.WriteLine("1.Gold\t");
+            Console.WriteLine("2.Silver\t");
+            Console.WriteLine("3.Platinum\t");
+            int ch = Convert.ToInt32(Console.ReadLine());
+            switch (ch)
+            {
+                case 1:
+                    obj.Goldpack();
+                    break;
+                case 2:
+                    obj.Silverpack();
+                    break;
+                case 3:
+                    obj.Platinumpack();
+                    break;
+                default:
+                    Console.WriteLine("Please choose one among  the three");
+                    break;
+            }
+
+        }
+    }
+}

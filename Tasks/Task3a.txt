@@ -1,0 +1,54 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Tasks
+{
+    internal class Task8a
+    {
+         
+        int a ,b;
+        public void add(int a,int b)
+        {
+            Console.WriteLine(a + b);
+        }
+        public void sub(int a, int b)
+        {
+            Console.WriteLine(a - b);
+        }
+        class MulDiv : Task8a
+        {
+            public void mul(int a, int b)
+            {
+                Console.WriteLine(a * b);
+            }
+            public void div(int a, int b)
+            {
+                Console.WriteLine(a / b);
+            }
+        }
+        public  static void Main(string[] args)
+        {
+            Console.WriteLine("Enter num1 :");
+            int a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter num2 :");
+            int b = Convert.ToInt32(Console.ReadLine());
+
+            MulDiv cal = new MulDiv();
+            cal.add(a,b);
+            cal.sub(a,b);
+            cal.mul(a,b);
+            cal.div(a,b);   
+
+        }
+
+    }
+
+   
+
+
+
+
+}
