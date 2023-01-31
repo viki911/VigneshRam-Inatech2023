@@ -14,24 +14,24 @@ namespace Tasks
         public abstract void div(int n1, int n2);
     }
 
-    class ArithOper
+    class ArithOper:Calci
     {
-        public void add(int n1, int n2)
+        public override void add(int n1, int n2)
         {
             int res = n1 + n2;
             Console.WriteLine("Addition of num 1 + num 2 is : {0} ", res);
         }
-        public void sub(int n1, int n2)
+        public override void sub(int n1, int n2)
         {
             int res = n1 - n2;
             Console.WriteLine("Subtraction of num 1 - num 2 is : {0} ", res);
         }
-        public void mul(int n1, int n2)
+        public override void mul(int n1, int n2)
         {
             int res = n1 * n2;
             Console.WriteLine("Multiplication of num 1 * num 2 is : {0} ", res);
         }
-        public void div(int n1, int n2)
+        public override void div(int n1, int n2)
         {
             int res = n1 / n2;
             Console.WriteLine("Division of num 1 / num 2 is : {0} ", res);
