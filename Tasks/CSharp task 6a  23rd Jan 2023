@@ -39,6 +39,9 @@ namespace Tasks
             Restar.Close();
 
             obj.readfDes();
+            FileInfo info = new FileInfo("D:\\Training\\Deserts.txt");
+            Console.WriteLine("Size:{0}", info.Length);
+            Console.WriteLine("Creaton time:{0}", info.CreationTime;
             
         }
       
