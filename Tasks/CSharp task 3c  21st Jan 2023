@@ -17,8 +17,8 @@ namespace Tasks
             long mb = 9092219410;
         public void validate(string p1, string p2)
         { 
-            this.email = p1;
-            this.pass = p2;
+            //this.email = p1;
+            //this.pass = p2;
             if(p1 == email && p2 == pass)
             {
                 Console.WriteLine("Welcome,Login successful");
