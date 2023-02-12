@@ -20,7 +20,7 @@ fname varchar(20),lname varchar(20),DOB date,phone varchar(10))
 
 declare @var int
 set @var =1
-while @var<=15
+while @var<=20
 begin
 insert task5
 values('v','r','01/09/2001','9092219410')
