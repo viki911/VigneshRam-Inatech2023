@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="../Scripts/jquery-3.4.1.min.js"></script>
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        .format{
+         background-color:khaki;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <table class="table">
+            <tr>
+                <th>S.No</th>
+                <th>Cricket Team</th>
+                <th>Players</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>CSK</td>
+                <td>MSD</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>MI</td>
+                <td>Rohit Sharma</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>RCB</td>
+                <td>Virat kholi</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>GT</td>
+                <td>Hardik Pandya</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>GL</td>
+                <td>Suresh Raina</td>
+            </tr>
+        </table>
+        <h2>Striped Table</h2>
+        <table class="table table-striped">
+            <tr>
+                <th>S.No</th>
+                <th>Cricket Team</th>
+                <th>Players</th>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>RCB</td>
+                <td>Virat kholi</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>GT</td>
+                <td>Hardik Pandya</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>GL</td>
+                <td>Suresh Raina</td>
+            </tr>
+        </table>
+        <h2>Bordered</h2>
+        <table class="table table-bordered">
+            <tr>
+                <th>S.No</th>
+                <th>Cricket Team</th>
+                <th>Players</th>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>RCB</td>
+                <td>Virat kholi</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>GT</td>
+                <td>Hardik Pandya</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>GL</td>
+                <td>Suresh Raina</td>
+            </tr>
+        </table>
+        <h2>Hovering</h2>
+        <table class="table table-hover">
+            <tr>
+                <th>S.No</th>
+                <th>Cricket Team</th>
+                <th>Players</th>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>RCB</td>
+                <td>Virat kholi</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>GT</td>
+                <td>Hardik Pandya</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>GL</td>
+                <td>Suresh Raina</td>
+            </tr>
+        </table>
+    </div>
+    <table class=" table" id="l">
+        <tr class="success">
+            <th>S.No</th>
+            <th>Cricket Team</th>
+            <th>Players</th>
+        </tr>
+        <tr class="danger">
+            <td>3</td>
+            <td>RCB</td>
+            <td>Virat kholi</td>
+        </tr>
+        <tr class="active">
+            <td>4</td>
+            <td>GT</td>
+            <td>Hardik Pandya</td>
+        </tr>
+        <tr class="mark">
+            <td>5</td>
+            <td>GL</td>
+            <td>Suresh Raina</td>
+        </tr>
+    </table>
+    <script>
+        $('#l').hover(function () { $(this).addClass('table-bordered'); },
+            function () { $(this).removeClass('table-bordered'); }
+        );
+        $('td').hover(function () { $(this).addClass('format'); },
+            function () { $(this).removeClass('format'); }
+        );
+    </script>
+</body>
+</html>

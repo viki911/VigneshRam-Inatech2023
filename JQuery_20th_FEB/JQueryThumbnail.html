@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="../Scripts/jquery-3.4.1.js"></script>
+    <style>
+        .Main
+        {
+            height:600px;
+            width:600px;
+            margin-left:500px;
+        }
+        .thumbnail{
+            margin-left:300px;
+        }
+        #limg
+        {
+            height:500px;
+            width:500px;
+        }
+        .thumbnail img:hover{border-color:brown;border:double 5px;}
+        .thumbnail img{height:200px;width:200px;}
+        h1{text-align:center}
+    </style>
+</head>
+<body>
+    <h1>JQuery Thumbnails</h1>
+    <div class="Main">
+        <img id="limg" src="Bruce_Lee_1973.jpg" />
+    </div>
+    <div class="thumbnail">
+        <a><img src="Bruce_Lee_1973.jpg" /></a>
+        <a><img src="MSD1.jpg" /></a>
+        <a><img src="MSD.jpeg" /></a>
+        <a><img src="MSD1.jpg" /></a>
+    </div>
+    <script>
+        $(document).ready(function ()
+        {
+            $('.thumbnail img').hover(function ()
+            {
+                var larimg = $(this).attr('src');
+                $('#limg').attr({ 'src': larimg });
+            });
+        });
+    </script>
+</body>
+</html>

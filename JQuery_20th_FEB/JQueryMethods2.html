@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        .Sameclass{
+            background-color:antiquewhite;
+            border: 5px solid black;
+        }
+        body {
+            width: 500px;
+            margin: 10px;
+            font-family: Helvetica;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .menu {
+            margin: 100px 0 0;
+            padding: 0;
+            list-style: none;
+        }
+
+            .menu li {
+                padding: 0;
+                margin: 0 2px;
+                float: left;
+                position: relative;
+                text-align: center
+            }
+
+            .menu a {
+                width: 140px;
+                padding: 14px 10px;
+                display: block;
+/*                background-image: url("red button.jpg");
+*/            background-color:black;
+
+            }
+
+            .menu li em {
+                width: 180px;
+                height: 45px;
+                font-size: 13px;
+                font-weight: normal;
+                position: absolute;
+                top: -85px;
+                left: -15px;
+                text-align: center;
+                padding: 20px 12px 10px;
+/*                background-image: url("Yellow Button.jfif");
+*/                
+                background-color:aqua;
+                z-index: 1;
+                display: none;
+            }
+            .format{
+                background-color:gold;
+            }
+    </style>
+    <script src="../Scripts/jquery-3.4.1.js"></script>
+</head>
+<body>
+    <div class="Sameclass">****</div>
+    <section class="Sameclass">****</section>
+    <aside class="Sameclass">****</aside>
+    <h2>My sample Menu</h2>
+    <ul class="menu">
+        <li><a href="#" title="This is the home page">Home</a></li>
+        <li><a href="#" title="This is about US"> About Us</a></li>
+        <li><a href="#" title="Our contact information">Contact Us</a></li>
+    </ul>
+    <table cellspacing="1" border="1">
+        <tr>
+            <td>Fist of Fury</td>
+            <td>Fist of Fury</td>
+        </tr>
+        <tr>
+            <td>Marvel</td>
+            <td>Marvel</td>
+        </tr>
+        <tr>
+            <td>Harry Potter</td>
+            <td>Harry Potter</td>
+        </tr>
+        <tr>
+            <td>Police Story</td>
+            <td>Police Story</td>
+        </tr>
+    </table>
+
+    <br />
+    <label>First number</label>
+    <input type="number" id="n1" onkeyup="addnum()" />
+    <br />
+    <label>First number</label>
+    <input type="number" id="n2" onkeyup="addnum()" />
+    <br />
+    sum of two numbers is <b><label id="res"></label></b>
+    <script>
+        $('.Sameclass').click(function () {
+            $(this).hide(2000);
+            $(this).show(4000);
+        });
+
+        $('td').hover(function () { $(this).addClass('format'); },
+            function () { $(this).removeClass('format'); }
+        );
+
+        $(function () {
+            $('.menu a').append("<em></em>");
+            $('.menu a').hover(function () {
+                $(this).find('em').stop().animate({ "opacity": "show", "top": "-75" }, "slow");
+                var htext = $(this).attr('title');
+                $(this).find("em").text(htext);
+            },
+                function () {
+                    $(this).find('em').stop().animate({ "opacity": "hide", "top": "-85" }, "fast");
+
+                });
+        });
+
+        $(document).ready(function () { addnum(); });
+        function addnum() {
+            var first = $('#n1').val();
+            if (!first) { first = 0; }
+            var second = $('#n2').val();
+            if (!second) { second = 0; }
+            sum = Number(first) + Number(second);
+            $('#res').html(sum);
+        }
+    </script>
+</body>
+</html>
